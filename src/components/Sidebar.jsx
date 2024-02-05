@@ -1,11 +1,17 @@
+
+
 function Sidebar () {
 
     return (
-        <div className="sidebar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        </div>
+        <aside className="sidebar">
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        </ul>
+        </aside>
     )
 }
 
 export  default Sidebar; 
+
+
