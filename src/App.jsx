@@ -10,18 +10,20 @@ import About from  './pages/About';
 
 function App() {
   return (
-    <>
-    <Navbar />  
+    <div className='app-container'>
+
+    <Navbar/>
     
     <Sidebar>
     <Home />
     <About />
-     
     </Sidebar>
 
     <Footer />
-    </>
+    </div>
   )
 }
 
 export default App
+
+

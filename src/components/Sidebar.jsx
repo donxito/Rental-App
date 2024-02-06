@@ -1,17 +1,10 @@
-
-
-function Sidebar () {
-
-    return (
-        <aside className="sidebar">
-        <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        </ul>
-        </aside>
-    )
+function Sidebar() {
+  return (
+    <aside className="sidebar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+    </aside>
+  );
 }
 
-export  default Sidebar; 
-
-
+export default Sidebar;
