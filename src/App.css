@@ -36,7 +36,7 @@
 /* SIDEBAR */
 
 .sidebar {
-  height: 20vh;
+  height: 100vh;
   width: 10vw;
   position: fixed;
   background-color: azure;

@@ -1,0 +1,15 @@
+.house-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.house-row1 img {
+    width: 20vw;
+}
+
+
+.house-row1 img:hover {
+    width: 30vw;
+}

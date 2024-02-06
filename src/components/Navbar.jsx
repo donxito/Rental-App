@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <nav className="navbar">
 
-        <h1>Apartamentos Beira Mar</h1>
+        <h1>Apartamentos Madrid</h1>
         <img className="logo" src={logo}></img>
 
         </nav>
