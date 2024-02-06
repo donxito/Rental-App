@@ -15,12 +15,15 @@ function App() {
 
     <Navbar/>
 
+    <div className='main-content'>
+
     <HouseList />
     
     <Sidebar>
     <Home />
     <About />
     </Sidebar>
+    </div>
 
     <Footer />
     </div>

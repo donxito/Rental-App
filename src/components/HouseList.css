@@ -1,15 +1,18 @@
 .house-list {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 60px;
     justify-content: center;
-    align-items: center;
 }
 
+
+
 .house-row1 img {
-    width: 20vw;
+    width: 200px;
 }
 
 
 .house-row1 img:hover {
-    width: 30vw;
+    width: 240px;
 }
+
