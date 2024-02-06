@@ -1,8 +1,13 @@
 .house-list {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px;
     gap: 60px;
     justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+    margin-bottom: 40px;
+    
+   
 }
 
 
@@ -16,3 +21,6 @@
     width: 240px;
 }
 
+button {
+    margin: 5px;
+}

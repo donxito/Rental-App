@@ -2,12 +2,12 @@
 import './App.css'
 
 
-import Navbar from './components/NavBar'
-import Footer from './components/Footer'
-import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
+import Sidebar from './components/Sidebar/Sidebar'
 import Home from './pages/Home';
 import About from  './pages/About';
-import HouseList from './components/HouseList'
+import HouseList from './components/HouseList/HouseList'
 
 function App() {
   return (
