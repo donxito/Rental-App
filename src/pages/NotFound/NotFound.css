@@ -1,0 +1,34 @@
+
+  .NotFound {
+    width: 100vw; 
+    height: auto;
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Align text and inline elements to center */
+
+
+  }
+
+  .NotFound img {
+    margin: auto; /* Center horizontally and adjust margin */
+    max-width: 40%; /* Ensure images don't exceed container width */
+  }
+  .NotFound h1 {
+    font-size: 2em;
+  }
+  .NotFound h2 {
+    font-size: 1.8em;
+  }
+  .NotFound h3 {
+    font-size: 1.5em;
+  }
+  .NotFound p {
+    font-size: 1em;
+  }
+  .homepageLink {
+    color: lightpink;
+    text-decoration: none;
+  }
+  .homepageLink:hover {
+    color: gray;
+    text-decoration: none;
+  }

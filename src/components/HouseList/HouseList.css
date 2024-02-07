@@ -4,12 +4,12 @@
     gap: 60px;
     justify-content: center;
     align-items: center;
-    margin-left: 300px;
+    margin-left: 22vw;
     margin-bottom: 40px;
     text-align: center;
-    gap: 2rem;
+    gap: 4  rem;
     
-   
+    
 }
 
 .house-container {
@@ -17,32 +17,55 @@
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-    
-   
+
 }
 
 .house-container img {
-    width: 200px;
-    
-    
+    width: 200px;    
 }
 
 
 .house-container img:hover {
     width: 220px;
-    box-shadow: 1px 1px 1px 1px;
+    outline: 4px auto -webkit-focus-ring-color;
 }
 
+.house-container span {
+    font-size: 1.1em;
+
+}
+
+.house-container p {
+    color:lime;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.link-button, button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid lightpink;
+    border-radius: 20px;
+    text-decoration: none;
+    color: lightpink;
+}
+
+.link-button:hover, button:hover{
+    background-color: lightpink;
+    color: black;
+}
+
+
+button {
+    color: whitesmoke;
+}
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
   margin: 5px;
+  
+  
 }
 
-.link-button {
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid white;
-
-}

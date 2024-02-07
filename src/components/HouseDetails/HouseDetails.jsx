@@ -1,5 +1,6 @@
 import house from "../../Data/data.json";
 import {Link, useParams} from  'react-router-dom';
+import "./HouseDetails.css";
 
 
 
