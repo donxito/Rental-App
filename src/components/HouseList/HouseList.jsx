@@ -3,8 +3,25 @@ import "./HouseList.css";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
+let houseSchuffeld = []
+
+// shuffle the array to get random house to show
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+houseSchuffeld = shuffle(house)
+
 function HouseList() {
-    const [housesToDisplay, setHousesToDisplay] = useState(house.slice(0, 16));
+    const [housesToDisplay, setHousesToDisplay] = useState(houseSchuffeld.slice(0, 16));
+    
 
     const deleteButton = (houseInfoId) => {
         console.log("Deleting the button...", houseInfoId);
@@ -28,7 +45,7 @@ function HouseList() {
     return (
         <div className="house-list">
             {housesToDisplay.map((houseInfo) => (
-                <div key={houseInfo.id} className="house-row1">
+                <div key={houseInfo.id} className="house-container">
                     <h1>{houseInfo.country}, {houseInfo.city}</h1>
                     <h3>{houseInfo.name}</h3>
                     <img src={houseInfo.picture_url.url} alt={houseInfo.name} />
@@ -37,12 +54,12 @@ function HouseList() {
                    
                     {isFamiliar(houseInfo.accommodates) ? <span>Good for families</span> : <span>Good for couples</span>}
 
-                   
+                    <Link className="link-button" to={`/house/${houseInfo.id}`}>More Details</Link>
                    
                     <button onClick={() => deleteButton(houseInfo.id)}>Delete</button>
 
-                    <Link to={`/house/${houseInfo.id}`}>More Details</Link>
-                    
+                
+
                 </div>
             ))}
         </div>

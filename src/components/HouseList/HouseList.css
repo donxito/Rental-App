@@ -6,21 +6,43 @@
     align-items: center;
     margin-left: 300px;
     margin-bottom: 40px;
+    text-align: center;
+    gap: 2rem;
     
    
 }
 
+.house-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    
+   
+}
 
-
-.house-row1 img {
+.house-container img {
     width: 200px;
+    
+    
 }
 
 
-.house-row1 img:hover {
-    width: 240px;
+.house-container img:hover {
+    width: 220px;
+    box-shadow: 1px 1px 1px 1px;
 }
 
-button {
-    margin: 5px;
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  margin: 5px;
+}
+
+.link-button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+
 }

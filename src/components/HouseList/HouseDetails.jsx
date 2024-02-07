@@ -16,7 +16,7 @@ function HouseDetails() {
         <h1>{houseInfo.name}</h1>
 
         {houseInfo.picture_url
-        ? <img src={houseInfo.picture_url} />
+        ? <img src={houseInfo.picture_url.url} />
         : <img src="https://dummyimage.com/600x400/000/fff"/>
         
         }
@@ -30,7 +30,7 @@ function HouseDetails() {
         <p>Description: {houseInfo.description}</p>
 
         <br />
-        <Link to="/">Home page</Link>
+        <Link className="link-button" to="/">Home page</Link>
 
         </section>
     
