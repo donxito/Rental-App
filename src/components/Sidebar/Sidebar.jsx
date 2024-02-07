@@ -1,11 +1,21 @@
 import "./Sidebar.css";
+import { NavLink, Route, Routes } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <aside className="sidebar">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-    </aside>
+    <>
+    <nav className="sidebar">
+  
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+          
+      </nav>
+
+  
+
+      </>
+
   );
 }
 
