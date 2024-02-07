@@ -1,6 +1,7 @@
 import house from "../../Data/data.json";
 import "./HouseList.css";
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function HouseList() {
     const [housesToDisplay, setHousesToDisplay] = useState(house.slice(0, 16));
@@ -35,8 +36,13 @@ function HouseList() {
                     {houseInfo.review_scores_rating > 90 && <p>High Rating Score</p>}
                    
                     {isFamiliar(houseInfo.accommodates) ? <span>Good for families</span> : <span>Good for couples</span>}
+
+                   
                    
                     <button onClick={() => deleteButton(houseInfo.id)}>Delete</button>
+
+                    <Link to={`/house/${houseInfo.id}`}>More Details</Link>
+                    
                 </div>
             ))}
         </div>

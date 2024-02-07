@@ -3,13 +3,13 @@ import './App.css'
 
 import { Route, Routes } from "react-router-dom";
 
-
+import About from './pages/About';
+import Contact from './pages/Contact';
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Sidebar from './components/Sidebar/Sidebar'
-
 import HouseList from './components/HouseList/HouseList'
-
+import HouseDetails from './components/HouseList/HouseDetails';
 
 
 function App() {
@@ -20,15 +20,16 @@ function App() {
 
     <div className='main-content'>
 
-    <HouseList />
-  
-    <Sidebar>
     <Routes>
-        <Route path="/" element={<HouseList/>} />
-        <Route path="/about" element={<h1>This is the About page</h1>} />
-        <Route path="/contact" element={<p>This is the Contact page</p>} />
+        <Route path="/" element={<HouseList />} />
+        <Route path="/house/:houseId" element={<HouseDetails />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<p>404, this page doesnt exist...</p>} />
       </Routes>
+  
+    <Sidebar>
+    
     </Sidebar>
     </div>
 
