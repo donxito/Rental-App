@@ -5,9 +5,10 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 120px; /* Adjust as needed */
-    left: 0; /* Keep the sidebar fixed on the right side */
+    top: 120px; 
+    left: 0; 
     float: left;
+    color:black;
 }
 
 .sidebar a {
