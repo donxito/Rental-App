@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import About from  './pages/About';
 import HouseList from './components/HouseList/HouseList'
 
+
+
 function App() {
   return (
     <div className='app-container'>
@@ -18,7 +20,7 @@ function App() {
     <div className='main-content'>
 
     <HouseList />
-    
+  
     <Sidebar>
     <Home />
     <About />
