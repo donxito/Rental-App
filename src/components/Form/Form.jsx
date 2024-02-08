@@ -26,8 +26,11 @@ function AddForm() {
     
         }
 
+        console.log("apartment submited")
 
-        setApartment ([...apartment, newApartment])
+        alert("apartment submited")
+
+        setApartment ([newApartment, ...apartment ])
 
     
         setCountry("")
@@ -37,7 +40,6 @@ function AddForm() {
 
         
     }
-
 
     return (
 
