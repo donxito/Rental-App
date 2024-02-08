@@ -3,6 +3,8 @@ import "./HouseList.css";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import AddForm from "../Form/Form"; 
+
 
 let houseSchuffeld = []
 
@@ -44,6 +46,7 @@ function HouseList() {
 
     return (
         <div className="house-list">
+          <AddForm />
             {housesToDisplay.map((houseInfo) => (
                 <div key={houseInfo.id} className="house-container">
                     <h1>{houseInfo.country}, {houseInfo.city}</h1>

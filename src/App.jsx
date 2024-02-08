@@ -13,6 +13,7 @@ import HouseList from './components/HouseList/HouseList'
 import HouseDetails from './components/HouseDetails/HouseDetails';
 
 
+
 function App() {
   return (
     <div className='app-container'>
