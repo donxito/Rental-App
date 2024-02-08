@@ -1,4 +1,3 @@
-
 import './App.css'
 
 import { Route, Routes } from "react-router-dom";
@@ -11,8 +10,7 @@ import Footer from './components/Footer/Footer'
 import Sidebar from './components/Sidebar/Sidebar'
 import HouseList from './components/HouseList/HouseList'
 import HouseDetails from './components/HouseDetails/HouseDetails';
-
-
+import AddForm from './components/Form/Form'; // Import AddForm component
 
 function App() {
   return (
@@ -31,7 +29,7 @@ function App() {
       </Routes>
   
     <Sidebar>
-    
+ 
     </Sidebar>
     </div>
 
@@ -40,6 +38,4 @@ function App() {
   )
 }
 
-export default App
-
-
+export default App;

@@ -1,77 +1,97 @@
-
-import {useState} from "react"
-import house from "../../Data/data.json";
-
-function AddForm() {
-
-    const [apartment, setApartment] = useState(house)
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 
 
-    const [country, setCountry] = useState("")
-    const [city, setCity] = useState("")
-    const [name, setName] = useState("")
-    const [image, setImage] = useState("")
+function AddForm({ onAddNewHouse }) {
 
 
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("");
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
+    const newApartment = {
+        id: Math.random(),
+        country: country,
+        city: city,
+        name: name,
+        picture_url: image,
+    };
 
-        const newApartment = {
-            country: country,
-            city: city,
-            name: name,
-            picture_url: image 
-    
-        }
+    alert("apartment submited");
 
-        console.log("apartment submited")
+    // Pass the new apartment to the parent component
+    onAddNewHouse(newApartment);
 
-        alert("apartment submited")
+    // clear the form fields
+    setCountry("");
+    setCity("");
+    setName("");
+    setImage("");
+  };
 
-        setApartment ([newApartment, ...apartment ])
+  return (
+    <form onSubmit={handleSubmit}>
+      <h2>Add your apartment here!</h2>
 
-    
-        setCountry("")
-        setCity("")
-        setName("")
-        setImage("")
+      <label>
+        Country:
+        <input
+          type="text"
+          name="country"
+          placeholder="Enter Country"
+          value={country}
+          onChange={(event) => {
+            setCountry(event.target.value);
+          }}
+        />
+      </label>
 
-        
-    }
+      <label>
+        City:
+        <input
+          type="text"
+          name="city"
+          placeholder="Enter City"
+          value={city}
+          onChange={(event) => {
+            setCity(event.target.value);
+          }}
+        />
+      </label>
 
-    return (
+      <label>
+        Name:
+        <input
+          type="text"
+          name="name"
+          placeholder="Short description"
+          value={name}
+          onChange={(event) => {
+            setName(event.target.value);
+          }}
+        />
+      </label>
 
-        <form onSubmit={handleSubmit}>
+      <label>
+        Image
+        <input
+          type="url"
+          name="image"
+          placeholder="Enter url"
+          value={image}
+          onChange={(event) => {
+            setImage(event.target.value);
+          }}
+        />
+      </label>
 
-        <h2>Add your apartment here!</h2>
-
-        <label>Country:  
-        <input type="text" name="country" placeholder="Enter Country" value={country} onChange = {(event) => {setCountry(event.target.value)}} />
-        </label> 
-        
-        <label>City:  
-        <input type="text" name="city" placeholder="Enter City" value={city} onChange = {(event) => {setCity(event.target.value)}}/> 
-        </label> 
-
-        <label>Name:  
-        <input type="text" name="name" placeholder="Short description"  value={name} onChange = {(event) => {setName(event.target.value)}}/> 
-        </label> 
-        
-        <label>Image 
-        <input type="url" name="image" placeholder="Enter url"  value={image} onChange = {(event) => {setImage(event.target.value)}}/> 
-        </label> 
-
-        <button type="submit">Add Apartment</button>
-
-
-    
-        </form>
-
-
-
-    )
+      <button type="submit">Add Apartment</button>
+    </form>
+  );
 }
 
 export default AddForm;
