@@ -53,12 +53,7 @@
 
 .link-button:hover, button:hover{
     background-color: lightpink;
-    color: black;
-}
-
-
-button {
-    color: whitesmoke;
+  
 }
 
 button:focus,
