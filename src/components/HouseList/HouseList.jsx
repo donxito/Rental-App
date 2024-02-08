@@ -21,8 +21,8 @@ function shuffle(a) {
 houseSchuffeld = shuffle(house);
 
 function HouseList() {
-  const [housesToDisplay, setHousesToDisplay] = useState(
-    houseSchuffeld.slice(0, 16)
+  const [housesToDisplay, setHousesToDisplay] = useState(houseSchuffeld.slice(0, 16)
+  
   );
 
   const deleteButton = (element) => {
@@ -39,10 +39,6 @@ function HouseList() {
   };
 
   const addNewHouse = (newHouse) => {
-    // Function for adding a new house, when one is deleted
-    // const randomIndex = Math.floor(Math.random() * house.length);
-    // const newHouse = house[randomIndex];
-
     setHousesToDisplay((prevHouses) => [newHouse, ...prevHouses]);
   };
 

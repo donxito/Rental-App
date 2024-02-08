@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer'
 import Sidebar from './components/Sidebar/Sidebar'
 import HouseList from './components/HouseList/HouseList'
 import HouseDetails from './components/HouseDetails/HouseDetails';
-import AddForm from './components/Form/Form'; // Import AddForm component
+
 
 function App() {
   return (
