@@ -22,7 +22,7 @@ houseSchuffeld = shuffle(house);
 
 function HouseList() {
 
-  const [housesToDisplay, setHousesToDisplay] = useState (houseSchuffeld.slice(0, 16));
+  const [housesToDisplay, setHousesToDisplay] = useState (houseSchuffeld);
 
  
 
