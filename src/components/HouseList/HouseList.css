@@ -1,66 +1,113 @@
 .house-list {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
     gap: 60px;
     justify-content: center;
     align-items: center;
-    margin-left: 22vw;
-    margin-bottom: 40px;
+    margin-left: 15vw;
+    margin-right: 10vw;
+    margin-bottom: 30vh;
+    margin-top: 10vh;
     text-align: center;
-    gap: 4  rem;
-    
-    
+    gap: 2rem;
+    height: 100vh;
 }
 
 .house-container {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
-
+    gap: 20px;
+    background-color: #FAEED1;
+    border-radius: 8px;
+    box-shadow: rgba(9, 30, 70, 0.5) 5px 0px 10px -5px;
+    padding: 20px;
+    
 }
 
-.house-container img {
-    width: 200px;    
-}
-
-
-.house-container img:hover {
-    width: 220px;
-    outline: 4px auto -webkit-focus-ring-color;
+.house-container h1, h2, h3, h4, p {
+    margin: 0 auto;
 }
 
 .house-container span {
     font-size: 1.1em;
-
 }
 
-.house-container p {
-    color:lime;
+.rating {
+    background-color:  #FC6736;
+    color: #FAEED1;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
     font-size: 1.2em;
     font-weight: bold;
 }
 
 
-.link-button, button {
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid lightpink;
-    border-radius: 20px;
-    text-decoration: none;
-    color: lightpink;
+.badge {
+    background-color:  #0C2D57;
+    color: #FAEED1;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-.link-button:hover, button:hover{
-    background-color: lightpink;
-  
+
+
+
+
+.link-button,
+button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #FFB0B0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFB0B0;
+    background-color: #6B6B6B;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+}
+
+.link-button:hover,
+button:hover {
+    background-color: #FFB0B0;
+    color: #6B6B6B;
+    box-shadow: 0 0 30px 0 #FFB0B0;
+    transition: all 0.2s ease-out;
+}
+
+.button:hover:before,
+.link:hover:before {
+    animation: shine 0.5s 0s linear;
+}
+
+.button:active,
+.link:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-  margin: 5px;
-  
-  
+    outline: 2px auto -webkit-focus-ring-color;
+    margin: 2px;
 }
 
+  
+  @keyframes shine {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+    50% {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  

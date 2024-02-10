@@ -6,21 +6,20 @@
     bottom: 0;
     left: 0;
     box-sizing: border-box;
-     background: linear-gradient(to left, rgb(252, 108, 132), lightpink);
+    background: linear-gradient(to left, #FFB0B0, lightpink);
     text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content:center;
     align-items: center;
    
   
-    
-    
   
   }
   
   .link {
     font-style: italic;
-    color: rgb(0, 0, 0);
+    color: #6B6B6B;
     font-size: 1rem;
   
   }

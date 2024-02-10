@@ -1,0 +1,23 @@
+.form {
+    align-self: center;
+  } 
+
+
+.form-input {
+    background-color: #EFECEC;
+    border: 2px solid #607274;
+    border-radius: 4px;
+
+}
+
+
+label {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    margin-left: 10px;
+  }

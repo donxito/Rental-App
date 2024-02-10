@@ -8,7 +8,7 @@ import "./About.css";
 function About () {
     return (
       <div className="About">
-        <h1>Project Description</h1>
+        <h1>The  team behind the project</h1>
         <p>Welcome to our website "Sei La!" The nº1 platform on the internet to rent<br />
           beautiful feel-at-home-like apartments all over the world! <br />
           Here you can find the most hidden gemns in the main european capitals... <br />

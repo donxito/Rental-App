@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
+import "./Form.css";
+
 
 function AddForm(props) {
 
@@ -27,7 +29,6 @@ function AddForm(props) {
     props.AddNewHouse(newApartment);
     
     
-
     // clear the form fields
     setCountry("");
     setCity("");
@@ -36,12 +37,13 @@ function AddForm(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Add your apartment here!</h2>
+   
+    <form onSubmit={handleSubmit} className="house-container">
+      <h1>Add your apartment here!</h1>
 
-      <label>
-        Country:
-        <input
+      <label className="form-label">
+        Country: 
+        <input className="form-input"
           type="text"
           name="country"
           placeholder="Enter Country"
@@ -52,9 +54,9 @@ function AddForm(props) {
         />
       </label>
 
-      <label>
-        City:
-        <input
+      <label className="form-label">
+        City: 
+        <input className="form-input"
           type="text"
           name="city"
           placeholder="Enter City"
@@ -65,9 +67,9 @@ function AddForm(props) {
         />
       </label>
 
-      <label>
+      <label className="form-label">
         Name:
-        <input
+        <input className="form-input"
           type="text"
           name="name"
           placeholder="Short description"
@@ -78,9 +80,9 @@ function AddForm(props) {
         />
       </label>
 
-      <label>
+      <label className="form-label">
         Image
-        <input
+        <input className="form-input"
           type="url"
           name="image"
           placeholder="Enter url"
@@ -91,8 +93,9 @@ function AddForm(props) {
         />
       </label>
 
-      <button type="submit">Add Apartment</button>
+      <button className="link-button" type="submit">Add Apartment</button>
     </form>
+
   );
 }
 

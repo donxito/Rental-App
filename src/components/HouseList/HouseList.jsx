@@ -25,7 +25,6 @@ function HouseList() {
   const [housesToDisplay, setHousesToDisplay] = useState (houseSchuffeld.slice(0, 16));
 
  
-  
 
   const deleteButton = (element) => {
     const newHouseList = housesToDisplay.filter(
@@ -37,7 +36,7 @@ function HouseList() {
 
   // Conditionally render content in the list items.
   const isFamiliar = (accommodates) => {
-    return accommodates >= 3;
+    return accommodates > 3;
   };
 
   // add new house
@@ -45,11 +44,6 @@ function HouseList() {
     setHousesToDisplay((prevHouses) => [newHouse, ...prevHouses]);
   };
 
-
-
-
-
- 
 
   return (
     <div className="house-list">
@@ -60,14 +54,15 @@ function HouseList() {
             {houseInfo.country}, {houseInfo.city}
           </h1>
           <h3>{houseInfo.name}</h3>
+
+          {houseInfo.review_scores_rating > 90 && <span className="rating">High Rating Score</span>}
+
           <img src={houseInfo.picture_url.url} alt={houseInfo.name} />
 
-          {houseInfo.review_scores_rating > 90 && <p>High Rating Score</p>}
-
           {isFamiliar(houseInfo.accommodates) ? (
-            <span>Good for families</span>
+            <span className="badge">Good for families</span>
           ) : (
-            <span>Good for couples</span>
+            <span></span>
           )}
 
           <Link className="link-button" to={`/house/${houseInfo.id}`}>

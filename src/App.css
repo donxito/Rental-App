@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+/* https://colorhunt.co/palette/607274faeed1ded0b6b2a59b
+  https://colorhunt.co/palette/0c2d57fc6736ffb0b0efecec
+
+*/
+
+/*
+
+#6B6B6B
+#FAEED1
+#DED0B6
+#B2A59B
+
+
+#0C2D57
+#FC6736
+#FFB0B0
+#EFECEC
+
+*/
 
 :root {
   font-family: 'Varela Round', sans-serif;
@@ -8,7 +27,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: whitesmoke
+  background:#EFECEC
 ;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,6 +35,12 @@
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
   margin: 0;
+
+  box-sizing: border-box;
+
+ 
+
+
 }
 
 .main-content {
@@ -29,7 +54,9 @@
   display: flex;
   overflow-x: hidden;
   height: 100%;
-  color: white;
+  color: #6B6B6B;
+
+
 
 }
 

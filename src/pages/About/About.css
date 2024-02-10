@@ -13,16 +13,19 @@
   
   .About h2 {
     font-size: 1.8em; 
+    margin-bottom: 20px;
 
   }
 
   .About h3 {
     margin: 0 auto;
+    font-size: 1.3em;
   }
   
   .About p {
-    font-size: 1em; 
+    font-size: 1.1em; 
     padding: 5px 0; 
+    margin-bottom: 10px;;
   }
   
   .About img {
@@ -37,12 +40,12 @@
   }
   
   .About a {
-    color: lightpink;
+    color:#FFB0B0;
     text-decoration: none;
-    font-size: 1em; 
+    font-size: 1.1em; 
   }
   
   .About a:hover {
-    color: gray;
+    color: #B2A59B;
   }
   
