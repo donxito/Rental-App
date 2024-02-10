@@ -21,16 +21,18 @@ function shuffle(a) {
 houseSchuffeld = shuffle(house);
 
 function HouseList() {
-  const [housesToDisplay, setHousesToDisplay] = useState(houseSchuffeld.slice(0, 16)
+
+  const [housesToDisplay, setHousesToDisplay] = useState (houseSchuffeld.slice(0, 16));
+
+ 
   
-  );
 
   const deleteButton = (element) => {
     const newHouseList = housesToDisplay.filter(
       (houseObject) => houseObject.id !== element
     );
     setHousesToDisplay(newHouseList);
-    // addNewHouse(); // Add a new house after deleting one
+
   };
 
   // Conditionally render content in the list items.
@@ -38,13 +40,20 @@ function HouseList() {
     return accommodates >= 3;
   };
 
+  // add new house
   const addNewHouse = (newHouse) => {
     setHousesToDisplay((prevHouses) => [newHouse, ...prevHouses]);
   };
 
+
+
+
+
+ 
+
   return (
     <div className="house-list">
-      <AddForm onAddNewHouse={addNewHouse} />
+      <AddForm AddNewHouse={addNewHouse} />
       {housesToDisplay.map((houseInfo) => (
         <div key={houseInfo.id} className="house-container">
           <h1>

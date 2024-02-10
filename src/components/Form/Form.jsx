@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 
-function AddForm({ onAddNewHouse }) {
+function AddForm(props) {
 
 
   const [country, setCountry] = useState("");
@@ -14,7 +14,7 @@ function AddForm({ onAddNewHouse }) {
     event.preventDefault();
 
     const newApartment = {
-        id: Math.random(),
+        id: Math.floor(Math.random() * 1000) + 1,
         country: country,
         city: city,
         name: name,
@@ -23,8 +23,10 @@ function AddForm({ onAddNewHouse }) {
 
     alert("apartment submited");
 
-    // Pass the new apartment to the parent component
-    onAddNewHouse(newApartment);
+ 
+    props.AddNewHouse(newApartment);
+    
+    
 
     // clear the form fields
     setCountry("");

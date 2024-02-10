@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer'
 import Sidebar from './components/Sidebar/Sidebar'
 import HouseList from './components/HouseList/HouseList'
 import HouseDetails from './components/HouseDetails/HouseDetails';
+import EditHouse from './components/EditHouse/EditHouse';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <Routes>
         <Route path="/" element={<HouseList />} />
         <Route path="/house/:houseId" element={<HouseDetails />} />
+        <Route  path="/house/:houseId/:EditHouse" element={<EditHouse />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
