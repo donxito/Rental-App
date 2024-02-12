@@ -65,6 +65,7 @@ button {
     border: 1px solid #FFB0B0;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 1em;
     color: #FFB0B0;
     background-color: #6B6B6B;
     box-shadow: 0 0 0 0 transparent;

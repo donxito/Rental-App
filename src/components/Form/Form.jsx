@@ -27,6 +27,8 @@ function AddForm(props) {
 
     alert("Apartment submited");
 
+    console.log(newApartment)
+
     props.AddNewHouse(newApartment);
 
 

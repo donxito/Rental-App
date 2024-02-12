@@ -2,15 +2,15 @@
   .NotFound {
     width: 100vw; 
     height: auto;
-    margin: 0 auto; /* Center horizontally */
-    text-align: center; /* Align text and inline elements to center */
+    margin: 0 auto; 
+    text-align: center; 
 
 
   }
 
   .NotFound img {
-    margin: auto; /* Center horizontally and adjust margin */
-    max-width: 40%; /* Ensure images don't exceed container width */
+    margin: auto; 
+    max-width: 40%;
   }
   .NotFound h1 {
     font-size: 2em;
