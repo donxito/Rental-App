@@ -1,23 +1,40 @@
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+}
+
 .form {
     align-self: center;
+    display: flex;
   } 
 
 
 .form-input {
     background-color: #EFECEC;
     border: 2px solid #607274;
+    color: #607274;
     border-radius: 4px;
+    padding: 5px;
 
 }
 
 
 label {
+
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    text-align: right;
+    text-align: center;
     margin-bottom: 10px;
   }
   
   input {
     margin-left: 10px;
+  }
+
+  .image-preview {
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+  
   }

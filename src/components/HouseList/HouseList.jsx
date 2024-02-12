@@ -23,8 +23,7 @@ houseSchuffeld = shuffle(house);
 function HouseList() {
 
   const [housesToDisplay, setHousesToDisplay] = useState (houseSchuffeld);
-
- 
+  
 
   const deleteButton = (element) => {
     const newHouseList = housesToDisplay.filter(
@@ -51,13 +50,23 @@ function HouseList() {
       {housesToDisplay.map((houseInfo) => (
         <div key={houseInfo.id} className="house-container">
           <h1>
-            {houseInfo.country}, {houseInfo.city}
+           {houseInfo.city}
           </h1>
+          <h2>
+          {houseInfo.country}
+          </h2>
           <h3>{houseInfo.name}</h3>
 
           {houseInfo.review_scores_rating > 90 && <span className="rating">High Rating Score</span>}
+          
+          {/* conditional render image if it's from the user list(picture_url) or data base (picture_url.url) */}
 
-          <img src={houseInfo.picture_url.url} alt={houseInfo.name} />
+          {typeof houseInfo.picture_url === "object" 
+          ? (
+            <img src={houseInfo.picture_url.url}  alt={houseInfo.name} /> 
+          ) : (
+            <img src={houseInfo.picture_url}  alt={houseInfo.name} />
+            )   } 
 
           {isFamiliar(houseInfo.accommodates) ? (
             <span className="badge">Good for families</span>

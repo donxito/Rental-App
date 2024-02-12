@@ -13,11 +13,13 @@ function EditHouse() {
   const [editHouseInfo, setEditHouseInfo] = useState({ ...houseInfo });
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setEditHouseInfo({ ...editHouseInfo, [name]: value });
-    saveDataToLocal(editHouseInfo);
-    handleInputChange("");
+    if (event && event.target) { // Check if event and event.target are defined
+      const { name, value } = event.target;
+      setEditHouseInfo({ ...editHouseInfo, [name]: value });
+      saveDataToLocal({ ...editHouseInfo, [name]: value }); // Save updated data to local storage
+    }
   };
+  
 
   const saveDataToLocal = (data) => {
     // Convert data to JSON string and save it to local storage

@@ -17,10 +17,10 @@ function HouseDetails() {
   if (!houseInfo) {
     return (
       <div className="house-details">
-        <h1>House Not Found</h1>
-        <p>The requested house details could not be found.</p>
-        <Link to="/">Back to Home</Link>
-        
+      <h1>Details Not Found</h1>
+      <p>The requested house details could not be found.</p>
+      <Link className="link-button" to="/">Home page</Link>
+      <Link className="link-button" to="./EditHouse">Edit House Details</Link> 
       </div>
     );
   }

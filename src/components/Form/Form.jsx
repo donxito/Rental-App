@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import { useState } from "react";
 
 import "./Form.css";
@@ -12,6 +13,7 @@ function AddForm(props) {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -23,12 +25,11 @@ function AddForm(props) {
         picture_url: image,
     };
 
-    alert("apartment submited");
+    alert("Apartment submited");
 
- 
     props.AddNewHouse(newApartment);
-    
-    
+
+
     // clear the form fields
     setCountry("");
     setCity("");
@@ -38,6 +39,7 @@ function AddForm(props) {
 
   return (
    
+    <div className="form-container">
     <form onSubmit={handleSubmit} className="house-container">
       <h1>Add your apartment here!</h1>
 
@@ -81,20 +83,22 @@ function AddForm(props) {
       </label>
 
       <label className="form-label">
-        Image
-        <input className="form-input"
-          type="url"
-          name="image"
-          placeholder="Enter url"
-          value={image}
-          onChange={(event) => {
-            setImage(event.target.value);
-          }}
-        />
-      </label>
+    Image:
+    <input
+      className="form-input"
+      type="url"
+      name="image"
+      placeholder="Enter URL"
+      value={image}
+      onChange={(event) => {
+        setImage(event.target.value);
+      }}
+    />
+  </label>
 
-      <button className="link-button" type="submit">Add Apartment</button>
-    </form>
+  <button className="link-button" type="submit">Add Apartment</button>
+</form>
+</div>
 
   );
 }
