@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import AddForm from "../Form/Form";
+import Search from "../Search/Search";
 
 let houseSchuffeld = [];
 
@@ -21,16 +22,13 @@ function shuffle(a) {
 houseSchuffeld = shuffle(house);
 
 function HouseList() {
-
-  const [housesToDisplay, setHousesToDisplay] = useState (houseSchuffeld);
-  
+  const [housesToDisplay, setHousesToDisplay] = useState(houseSchuffeld);
 
   const deleteButton = (element) => {
     const newHouseList = housesToDisplay.filter(
       (houseObject) => houseObject.id !== element
     );
     setHousesToDisplay(newHouseList);
-
   };
 
   // Conditionally render content in the list items.
@@ -43,44 +41,50 @@ function HouseList() {
     setHousesToDisplay((prevHouses) => [newHouse, ...prevHouses]);
   };
 
+  const handleSearch = (search) => {
+    const filteredHouse = houseSchuffeld.filter((house) =>
+      house.city.toLowerCase().includes(search.toLowerCase())
+    );
+    setHousesToDisplay(filteredHouse);
+  };
 
   return (
-    <div className="house-list">
-      <AddForm AddNewHouse={addNewHouse} />
-      {housesToDisplay.map((houseInfo) => (
-        <div key={houseInfo.id} className="house-container">
-          <h1>
-           {houseInfo.city}
-          </h1>
-          <h2>
-          {houseInfo.country}
-          </h2>
-          <h3>{houseInfo.name}</h3>
+    <div className="container">
+      <Search onSearch={handleSearch} />
+      <div className="house-list">
+        <AddForm AddNewHouse={addNewHouse} />
+        {housesToDisplay.map((houseInfo) => (
+          <div key={houseInfo.id} className="house-container">
+            <h1>{houseInfo.city}</h1>
+            <h2>{houseInfo.country}</h2>
+            <h3>{houseInfo.name}</h3>
 
-          {houseInfo.review_scores_rating > 90 && <span className="rating">High Rating Score</span>}
-          
-          {/* conditional render image if it's from the user list(picture_url) or data base (picture_url.url) */}
+            {houseInfo.review_scores_rating > 90 && (
+              <span className="rating">High Rating Score</span>
+            )}
 
-          {typeof houseInfo.picture_url === "object" 
-          ? (
-            <img src={houseInfo.picture_url.url}  alt={houseInfo.name} /> 
-          ) : (
-            <img src={houseInfo.picture_url}  alt={houseInfo.name} />
-            )   } 
+            {/* conditional render image if it's from the user list(picture_url) or data base (picture_url.url) */}
 
-          {isFamiliar(houseInfo.accommodates) ? (
-            <span className="badge">Good for families</span>
-          ) : (
-            <span></span>
-          )}
+            {typeof houseInfo.picture_url === "object" ? (
+              <img src={houseInfo.picture_url.url} alt={houseInfo.name} />
+            ) : (
+              <img src={houseInfo.picture_url} alt={houseInfo.name} />
+            )}
 
-          <Link className="link-button" to={`/house/${houseInfo.id}`}>
-            More Details
-          </Link>
+            {isFamiliar(houseInfo.accommodates) ? (
+              <span className="badge">Good for families</span>
+            ) : (
+              <span></span>
+            )}
 
-          <button onClick={() => deleteButton(houseInfo.id)}>Delete</button>
-        </div>
-      ))}
+            <Link className="link-button" to={`/house/${houseInfo.id}`}>
+              More Details
+            </Link>
+
+            <button onClick={() => deleteButton(houseInfo.id)}>Delete</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
