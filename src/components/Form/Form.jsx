@@ -51,6 +51,7 @@ function AddForm(props) {
         <label className="form-label">
           Country:
           <input
+            required
             className="form-input"
             type="text"
             name="country"
@@ -65,6 +66,7 @@ function AddForm(props) {
         <label className="form-label">
           City:
           <input
+            required
             className="form-input"
             type="text"
             name="city"
@@ -93,6 +95,7 @@ function AddForm(props) {
         <label className="form-label">
           Type:
           <select
+            required
             className="form-input"
             name="type"
             value={type}
@@ -128,7 +131,6 @@ function AddForm(props) {
             className="form-input"
             name="price"
             type="number"
-           
             min="1"
             max="9999"
             value={price}

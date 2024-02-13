@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import house from "../../Data/data.json";
 import "./EditHouse.css";
 
@@ -12,14 +12,16 @@ function EditHouse() {
 
   const [editHouseInfo, setEditHouseInfo] = useState({ ...houseInfo });
 
+  const navigate = useNavigate();
+
   const handleInputChange = (event) => {
-    if (event && event.target) { // Check if event and event.target are defined
+    if (event && event.target) {
+      // Check if event and event.target are defined
       const { name, value } = event.target;
       setEditHouseInfo({ ...editHouseInfo, [name]: value });
       saveDataToLocal({ ...editHouseInfo, [name]: value }); // Save updated data to local storage
     }
   };
-  
 
   const saveDataToLocal = (data) => {
     // Convert data to JSON string and save it to local storage
@@ -31,6 +33,7 @@ function EditHouse() {
     setHouseInfo({ ...editHouseInfo });
     console.log("Updated house information:", editHouseInfo);
     alert("changes saved");
+    navigate(`/`);
   };
 
   return (

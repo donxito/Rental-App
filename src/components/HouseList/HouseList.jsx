@@ -41,6 +41,7 @@ function HouseList() {
     setHousesToDisplay((prevHouses) => [newHouse, ...prevHouses]);
   };
 
+  // function to use the search bar
   const handleSearch = (search) => {
     const filteredHouse = houseSchuffeld.filter((house) =>
       house.city.toLowerCase().includes(search.toLowerCase())
