@@ -1,1 +1,1 @@
-seila-apartments.netlify.app/
+seila-apartments.netlify.app
