@@ -27,7 +27,7 @@ function AddForm(props) {
       accommodates: capacity,
     };
 
-    alert("Apartment submited");
+
 
     console.log(newApartment);
 
