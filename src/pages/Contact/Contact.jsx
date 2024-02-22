@@ -20,9 +20,7 @@ function Contact() {
       email: email,
     };
     console.log(message);
-    alert(
-      `Thank you for reaching out! We will get back to you as soon as possible.`
-    );
+    
 
     navigate(`/`);
 
